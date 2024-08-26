@@ -120,6 +120,9 @@ app.use((err,req,res,next) =>{
 
   // res.status(statusCode).send(message);
 });
+app.get("/", (req, res) => {
+  res.render(index.ejs); // Render the 'home.ejs' view
+});
 
 app.listen(port, () => {
   console.log("server is listening to port 8080");
