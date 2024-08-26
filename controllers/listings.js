@@ -83,6 +83,3 @@ module.exports.index = async (req, res) => {
     req.flash("success","Listing Deleted");
     res.redirect("/listings");
   }
-  // amirbhat577
-  // 8IosV4G0eAsYSaN0
-  // mongodb+srv://amirbhat577:8IosV4G0eAsYSaN0@cluster0.e10c0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
