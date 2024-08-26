@@ -4,6 +4,7 @@ require('dotenv').config();
 }
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 4000;
 const mongoose = require("mongoose");
 const ExpressError = require("./utils/ExpressError.js");
 const path = require("path");
@@ -18,6 +19,7 @@ const User = require("./models/user.js");
 const listingRouter = require("./routes/listing.js")
 const reviewsRouter = require("./routes/review.js")
 const userRouter = require("./routes/user.js");
+
 
 const dbUrl =process.env.ATLASDB_URL;
 
@@ -119,6 +121,6 @@ app.use((err,req,res,next) =>{
   // res.status(statusCode).send(message);
 });
 
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("server is listening to port 8080");
 });
